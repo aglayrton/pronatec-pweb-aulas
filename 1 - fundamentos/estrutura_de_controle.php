@@ -1,5 +1,15 @@
 <?php
 // Estruturas de controle em PHP
+
+// Condicional if
+$idade = 14; // Idade do aluno
+
+if ($idade >= 18) { // Se a idade do aluno for maior ou igual a 18 anos
+    echo "Você já pode tirar a carteira de motorista."; // Exibe uma mensagem para o aluno
+}
+// Resultado:
+// (nenhuma saída, pois a condição não foi atendida)
+
 // Condicional if...else
 $notaFinal = 8.5; // Nota final do aluno
 $mediaAprovacao = 7.0; // Média para aprovação
@@ -11,6 +21,21 @@ if ($notaFinal >= $mediaAprovacao) { // Se a nota final for maior ou igual à m�
 }
 // Resultado:
 // Parabéns! Você foi aprovado(a).
+
+// Condicional if...elseif...else
+$notaFinal = 5.0; // Nota final do aluno
+$mediaAprovacao = 7.0; // Média para aprovação
+$mediaRecuperacao = 5.0; // Média para recuperação
+
+if ($notaFinal >= $mediaAprovacao) { // Se a nota final for maior ou igual à média de aprovação
+    echo "Parabéns! Você foi aprovado(a)."; // Exibe uma mensagem de aprovação
+} elseif ($notaFinal >= $mediaRecuperacao) { // Senão, se a nota final for maior ou igual à média de recuperação
+    echo "Você está em recuperação."; // Exibe uma mensagem de recuperação
+} else { // Senão (se a nota final for menor que a média de recuperação)
+    echo "Infelizmente, você foi reprovado(a)."; // Exibe uma mensagem de reprovação
+}
+// Resultado:
+// Você está em recuperação.
 
 // Condicional switch...case
 $diaSemana = "terça"; // Dia da semana
